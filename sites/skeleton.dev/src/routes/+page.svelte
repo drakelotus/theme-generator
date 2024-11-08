@@ -1,25 +1,17 @@
 <script lang="ts">
-	// HTTP response data provided by +page.ts
-	import type { PageData } from './$types';
-	export let data: PageData;
-	$: ({ contributors } = data);
+	import DocsThemer from '$lib/layouts/DocsThemer/DocsThemer.svelte';
 </script>
 
-<div>
-	<!-- Promo Banner -->
-	<div class="variant-filled-primary p-4">
-		<div class="w-full max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-[1fr_auto] gap-4">
-			<div class="flex items-center gap-6">
-				<span class="text-xl">🎉</span>
-				<p class="text-lg">The Skeleton v3 Beta is now available!</p>
-			</div>
-			<div class="flex gap-4">
-				<a class="btn variant-filled" href="https://github.com/skeletonlabs/skeleton/discussions/2919" target="_blank">Learn More</a>
-				<a class="btn variant-filled" href="https://github.com/skeletonlabs/skeleton/discussions/2921" target="_blank">Migration Guide</a>
-			</div>
-		</div>
-	</div>
+<div class="page-container">
+	<header class="space-y-4">
+		<h1 class="h1">Theme Generator</h1>
+	</header>
+
+	<hr />
+
+	<DocsThemer />
 </div>
+
 
 <style lang="postcss">
 	.section-container {

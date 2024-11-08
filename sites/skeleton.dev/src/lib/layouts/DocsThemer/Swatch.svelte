@@ -19,8 +19,7 @@
 					<div class="h-full flex justify-center items-center {shadeClasses}">
 						{#if shade === '500'}
 							<div class="grid grid-cols-[auto_1fr] gap-1.5 place-items-center">
-								<i class="fa-solid fa-skull"></i>
-								<span class="hidden xl:inline-block">Text</span>
+								<span class="hidden xl:inline-block">Base</span>
 							</div>
 						{/if}
 					</div>

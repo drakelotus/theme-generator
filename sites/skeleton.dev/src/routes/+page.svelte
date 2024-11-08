@@ -4,7 +4,7 @@
 
 <div class="page-container">
 	<header class="space-y-4">
-		<h1 class="h1">Theme Generator</h1>
+		<h1 class="h1">Theme Generator by Drakelotus</h1>
 	</header>
 
 	<hr />

@@ -1,0 +1,50 @@
+/* Stylesheet: core.css */
+
+/* === Body Styles === */
+
+body {
+	@apply bg-surface-50-900-token;
+	/* Typography */
+	@apply text-base font-token text-token;
+}
+
+/* === Selection === */
+
+::selection {
+	@apply bg-primary-500/30;
+}
+
+/* === Focus === */
+
+/* Outline (do not change) */
+/* http://www.outlinenone.com/ */
+
+/* Mobile tap highlight */
+/* https://developer.mozilla.org/en-US/docs/Web/CSS/-webkit-tap-highlight-color */
+html {
+	-webkit-tap-highlight-color: rgba(128, 128, 128, 0.5);
+}
+
+/* === Scrollbars === */
+/* https://developer.mozilla.org/en-US/docs/Web/CSS/scrollbar-color */
+/* https://developer.chrome.com/docs/css-ui/scrollbar-styling */
+
+:root {
+	scrollbar-color: rgba(128, 128, 128, 0.5) rgba(0, 0, 0, 0.1); /* thumb / track */
+	scrollbar-width: thin;
+}
+
+/* Firefox */
+/* https://developer.mozilla.org/en-US/docs/Web/CSS/scrollbar-color#browser_compatibility */
+html {
+	scrollbar-color: rgba(0, 0, 0, 0.2) rgba(255, 255, 255, 0.05);
+}
+html.dark {
+	scrollbar-color: rgba(255, 255, 255, 0.1) rgba(0, 0, 0, 0.05);
+}
+
+/* === Horizontal Rules === */
+
+hr:not(.divider) {
+	@apply block border-t border-solid border-surface-300-600-token;
+}

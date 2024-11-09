@@ -28,7 +28,7 @@ semanticNames.forEach((colorName) => {
 	return tailwindNumbers.forEach((colorShade) => {
 		const label = keyMappings(colorName);
 		const colorLabel = label.charAt(0).toUpperCase() + label.slice(1);
-		colorPropsArr.push({ label: `${label} ${colorLabel}`, value: `var(--color-${colorName}-${colorShade})` });
+		colorPropsArr.push({ label: `${colorLabel} ${colorShade}`, value: `var(--color-${colorName}-${colorShade})` });
 	});
 });
 

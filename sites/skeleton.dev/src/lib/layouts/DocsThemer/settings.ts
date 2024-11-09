@@ -2,6 +2,22 @@
 
 import { semanticNames, tailwindNumbers, type SemanticNames, type TailwindNumbers } from '$lib/types';
 
+
+function keyMappings(key: string): string {
+	const colorMapping: Record<string, string> = {
+		primary: 'primary',
+		secondary: 'secondary',
+		tertiary: 'accent',
+		success: 'success',
+		error: 'error',
+		warning: 'warning',
+		surface: 'base'
+	};
+
+	return colorMapping[key];
+}
+
+
 // Generate a list of color properties for selection inputs.
 // Ex: --color-[colorName]-[colorShade]
 const colorPropsArr: {
@@ -10,8 +26,9 @@ const colorPropsArr: {
 }[] = [];
 semanticNames.forEach((colorName) => {
 	return tailwindNumbers.forEach((colorShade) => {
-		const colorLabel = colorName.charAt(0).toUpperCase() + colorName.slice(1);
-		colorPropsArr.push({ label: `${colorLabel} ${colorShade}`, value: `var(--color-${colorName}-${colorShade})` });
+		const label = keyMappings(colorName);
+		const colorLabel = label.charAt(0).toUpperCase() + label.slice(1);
+		colorPropsArr.push({ label: `${label} ${colorLabel}`, value: `var(--color-${colorName}-${colorShade})` });
 	});
 });
 
